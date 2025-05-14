@@ -6,6 +6,7 @@ import Profile from "./pages/Profile"
 import Signup from "./pages/Signup"
 import NotFound from "./pages/NotFound"
 import Navbar from "./component/Navbar"
+import CreateCourse from "./pages/CreateCourse"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -26,7 +27,8 @@ function App() {
         <Route path="/Profile" element = {<Profile/>}/>
         <Route path="/Signup" element = {<Signup/>}/>
         <Route path="*" element = {<NotFound/>}/>
-       
+        <Route path="/create-course" element={<CreateCourse />} />
+
       </Routes>
       
       <ToastContainer position="top-right" autoClose={3000} />

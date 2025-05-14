@@ -18,6 +18,8 @@ const Navbar = () => {
     <nav style={{ padding: '1rem', display: 'flex', gap: '1rem', borderBottom: '1px solid #ccc' }}>
       <Link to="/">Home</Link>
       <Link to="/courses">Courses</Link>
+      <Link to="/create-course">Add Course</Link>
+
 
       {!isAuthenticated ? (
         <>

@@ -18,8 +18,11 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
-// ✅ Register auth routes
+// ✅ Auth routes
 app.use('/api/auth', require('./routes/authRoutes'));
+
+// ✅ Course routes
+app.use('/api/courses', require('./routes/courseRoutes'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
