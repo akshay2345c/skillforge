@@ -6,6 +6,8 @@ import Profile from "./pages/Profile"
 import Signup from "./pages/Signup"
 import NotFound from "./pages/NotFound"
 import Navbar from "./component/Navbar"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -14,6 +16,8 @@ function App() {
 
   return (
     <>
+
+
  <Navbar />
       <Routes>
         <Route path="/" element = {<Home/>}/>
@@ -22,9 +26,10 @@ function App() {
         <Route path="/Profile" element = {<Profile/>}/>
         <Route path="/Signup" element = {<Signup/>}/>
         <Route path="*" element = {<NotFound/>}/>
+       
       </Routes>
       
-   
+      <ToastContainer position="top-right" autoClose={3000} />
     
     </>
   )

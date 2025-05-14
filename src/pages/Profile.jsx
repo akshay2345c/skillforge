@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Profile = () => {
-  return (
-    <div>Profile</div>
-  )
-}
+  const { user, isAuthenticated } = useSelector((state) => state.auth);
 
-export default Profile
+  if (!isAuthenticated) {
+    return <p style={{ padding: '1rem' }}>You are not logged in.</p>;
+  }
+
+  return (
+    <div style={{ padding: '1rem' }}>
+      <h2>👤 Profile</h2>
+      <p><strong>Name:</strong> {user?.name}</p>
+      <p><strong>Email:</strong> {user?.email}</p>
+    </div>
+  );
+};
+
+export default Profile;
